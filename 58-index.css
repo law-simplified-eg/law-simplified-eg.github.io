@@ -1,0 +1,64 @@
+/* القانون ببساطة - courthouse look: marble page, navy arch header, gold-framed plaques */
+html,body,#root{margin:0;min-height:100%}
+body{background:#e9e5db}
+.nv{font-family:system-ui,Segoe UI,Tahoma,sans-serif;color:#0f1b33;min-height:100vh;position:relative;
+ background:linear-gradient(135deg,#f6f4ef,#e7e3d9 38%,#f4f2ec 68%,#dcd7cb)}
+/* column strips on both sides */
+.nv:before,.nv:after{content:"";position:absolute;top:300px;bottom:0;width:14px;
+ background:repeating-linear-gradient(90deg,#d6d0c2 0 2px,#f3f0e8 2px 5px);opacity:.9;pointer-events:none}
+.nv:before{right:0}.nv:after{left:0}
+/* arched navy header */
+.nv-hero{position:relative;text-align:center;padding:34px 20px 44px;background:radial-gradient(ellipse at top,#1f3562,#0f1b33 72%);
+ border-bottom:5px solid #c9a24a;border-radius:0 0 50% 50% / 0 0 38px 38px;color:#fff;box-shadow:0 6px 18px #0f1b3333}
+.nv-seal{width:64px;height:64px;margin:0 auto 12px;border:0;border-radius:16px;display:block;box-shadow:0 0 0 2px #e3c37455}
+.nv-title{margin:0;font-weight:700;font-size:36px;line-height:1.5;color:#e3c374;letter-spacing:0}
+.nv-rule{width:72px;height:2px;background:#c9a24a;margin:8px auto 12px}
+.nv-sub{margin:0 auto 14px;max-width:440px;color:#d3dbec;font-size:14px;line-height:1.7}
+.nv-stats{display:flex;justify-content:center;align-items:baseline;gap:6px;color:#d3dbec;margin-bottom:0}
+.nv-stats strong{color:#e3c374;font-size:22px;font-weight:600}
+.nv-stats i{width:1px;height:16px;background:#c9a24a88;margin:0 10px;align-self:center}
+.nv-cta{display:inline-flex;align-items:center;min-height:44px;padding:0 24px;border-radius:999px;background:#c9a24a;color:#0f1b33;font-weight:600;text-decoration:none}
+.nv-main{position:relative;z-index:1;padding:26px 28px 24px;max-width:1040px;margin:0 auto}
+/* gold ruled section heading */
+.nv-h2{margin:0 0 16px;font-weight:700;font-size:20px;color:#8a6d22;display:flex;align-items:center;gap:12px}
+.nv-h2:before,.nv-h2:after{content:"";flex:1;height:1px;background:#b98f33}
+.nv-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;justify-content:center}
+.nv-chip{min-height:40px;padding:0 16px;border-radius:999px;border:1px solid #b98f33;background:#fffaf0;color:#0f1b33;font:inherit;cursor:pointer}
+.nv-chip.is-on{background:#0f1b33;color:#e3c374;border-color:#0f1b33;font-weight:600}
+.nv-search{width:100%;box-sizing:border-box;min-height:44px;margin:0 0 20px;padding:0 16px;border-radius:999px;border:1px solid #b98f33;background:#fffaf0;color:#0f1b33;font:inherit}
+.nv-search::placeholder{color:#7a7360}
+.nv-empty{color:#4a4f60}
+.nv-grid{display:grid;grid-template-columns:1fr;gap:14px}
+/* navy plaque with double gold frame */
+.nv-card{display:flex;flex-direction:row;gap:12px;background:#0f1b33;color:#fff;border:2px solid #0f1b33;border-radius:10px;
+ box-shadow:inset 0 0 0 1px #c9a24a,inset 0 0 0 4px #0f1b33,inset 0 0 0 5px #c9a24a88;overflow:hidden;text-decoration:none}
+.nv-card:hover,.nv-card:focus-visible{box-shadow:inset 0 0 0 1px #e3c374,inset 0 0 0 4px #0f1b33,inset 0 0 0 5px #e3c374}
+.nv-poster{position:relative;flex:0 0 100px;align-self:center;margin:12px 0 12px 0;margin-inline-start:12px;aspect-ratio:9 / 16;
+ background:linear-gradient(160deg,#26417a,#0f1b33);background-size:cover;background-position:center;border:1px solid #e3c374;border-radius:6px;display:grid;place-items:center}
+.nv-play{width:38px;height:38px;border-radius:50%;background:#c9a24acc;color:#0f1b33;display:grid;place-items:center;font-size:14px;padding-inline-start:2px}
+.nv-no{position:absolute;top:5px;inset-inline-start:5px;color:#e3c374;font-weight:600;font-size:12px;background:#0f1b33cc;border-radius:5px;padding:0 6px}
+.nv-info{padding:14px 0;padding-inline-end:16px;display:flex;flex-direction:column;gap:6px;justify-content:center}
+.nv-tag{color:#e3c374;font-size:12px;font-weight:600}
+.nv-vt{margin:0;font-size:16px;line-height:26px;font-weight:700;color:#f1d98f}
+.nv-watch{color:#d3dbec;font-size:.92rem;font-weight:600;white-space:nowrap}
+.nv-note{margin:28px 0 4px;padding-top:16px;border-top:1px solid #b98f33;color:#4a4f60;font-size:13px}
+.nv-foot{margin:0;color:#6b6f7e;font-size:12px}
+@media (min-width:768px){
+ .nv-hero{padding:48px 20px 56px;border-radius:0 0 50% 50% / 0 0 56px 56px}
+ .nv-title{font-size:52px}
+ .nv-main{padding:40px 48px 32px}
+ .nv:before,.nv:after{width:22px;top:340px}
+ .nv-grid{grid-template-columns:1fr 1fr 1fr;gap:18px}
+ .nv-card{flex-direction:column;gap:0}
+ .nv-poster{flex:none;align-self:stretch;margin:12px 12px 0;aspect-ratio:9 / 13;background-position:50% 45%}
+ .nv-info{padding:12px 16px 16px}
+}
+@media (max-width:359px){.nv-watch{font-size:.8rem}.nv-poster{flex-basis:88px}}
+.nv-card.is-open{grid-column:1 / -1;flex-direction:column}
+.nv-card.is-open .nv-info{padding:14px;align-items:center;text-align:center}
+.nv-card.is-open .nv-poster{display:none}
+.nv-player{width:100%;max-width:340px;aspect-ratio:9 / 16;background:#000;border-radius:8px;margin:12px auto 0;display:block;border:1px solid #e3c374}
+.nv-btn{font:inherit;background:none;border:0;padding:0;text-align:start;cursor:pointer;color:#e3c374;font-weight:600}
+.nv-card.is-open .nv-btn{text-align:center}
+.nv-card.is-off{opacity:.8}
+.nv-soon{color:#aab4cc!important;font-weight:400!important}
